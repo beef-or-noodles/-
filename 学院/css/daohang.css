@@ -1,0 +1,149 @@
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none !important;
+}
+
+/*绉诲姩Nav*/
+ul li{
+    list-style-type: none;
+}
+ul{
+    padding-inline-start: 0px;
+}
+nav{
+    border-bottom:none !important;
+    display: none;
+}
+.nav > li{
+  float: none;
+}
+.navbar-nav{
+    text-align: center !important;
+    margin: 0 !important;
+}
+.navbar-nav .open .dropdown-menu{
+    text-align: center !important;
+    background: #e6eefa;
+}
+.container-fluid>.navbar-header{
+    width: 100%;
+    margin-left: 0 !important;
+}
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.navbar-toggle{
+    display: block !important;
+}
+.navbar-brand{
+    margin-left: 0 !important;
+    padding-left: 15px !important;
+}
+.navbar-header {
+    background:#990304 !important;
+}
+.navbar-brand{
+    color: white !important;
+    font-weight: bold;
+}
+.navbar-toggle {
+    border: 0px !important;
+}
+.navbar-toggle:focus,.navbar-toggle:hover{
+    background: none !important;
+}
+.navbar-toggle:hover .icon-bar{
+    background-color: white !important;
+}
+.icon-bar{
+    background-color: white !important;
+}
+.nav-pills a{
+    color: black !important;
+}
+/*pcNav*/
+body{
+
+}
+
+.pcNav>li>a{
+    display: block;
+    font-size: 14px;
+    color:#990304 ;
+    font-size: 14px;
+    padding:17px 0;
+}
+.pcNav>li>a .iconfont{
+    font-size: 26px;
+}
+
+/*浜岀骇鑿滃崟*/
+.pcNav>li{
+    flex: 1;
+}
+.pcNav>li>ul>li>a{
+    display: block;
+    line-height: 40px;
+    color: black !important;
+    font-size: 12px;
+}
+.pcNav>li a p{
+    transition: all .36s ease;
+}
+.pcNav>li:hover{
+    background-color: #990304;
+}
+.pcNav>li:hover a{
+    color: white;
+}
+/*pc*/
+.pcNav .nav_two{
+    display: none;
+    position: fixed;
+    box-sizing: content-box;
+    width: 150px;
+    background: rgba(0,0,0,.5);
+    top: 70px;
+    width: 100%;
+    left: 0;
+    float: left;
+    line-height: 55px;
+}
+.pcNav>li:hover .nav_two{
+     display: block;
+     animation: any .36s forwards;
+ }
+.pcNav>li>.nav_two a:hover{
+ background-color: #990304;
+}
+.pcNav .nav_two li a{
+    text-align: center;
+    font-size: 12px;
+    padding:20px 25px;
+}
+.pcNav .nav_two ul{
+    display: flex;
+    justify-content: center;
+}
+@keyframes any {
+    0%{
+        opacity: 0;
+        top: 70px;
+    }
+    100%{
+        opacity: 1;
+        top: 90px;
+    }
+}
+.navbar{
+    display: none;
+}
+@media only screen and (max-width:991px ) {
+    .navbar{
+        display: block;
+    }
+    .header{
+        display: none;
+    }
+}
