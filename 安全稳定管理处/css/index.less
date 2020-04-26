@@ -1,0 +1,314 @@
+body{
+  font-family: MicrosoftYaHei;
+  background: #eff8ff;
+}
+a{
+  text-decoration:none !important;
+  color: #2a2a2a;
+  font-size: 12px;
+}
+a:hover{
+  color: red;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+p,h1,h2,h3,h4,h5,div,a{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+li{
+  list-style:none;
+}
+.row>div{
+  padding: 0 5px;
+  margin: 10px 0;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  background: #d1d1d1;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  border-radius: 10px;
+  background: white;
+}
+
+@theme: #00468c;
+.pagination{
+  width: 100%;
+  text-align: center;
+}
+.pagination ul span,.pg-1 .total{
+  display: inline-block;
+  height: 24px;
+  padding: 0 15px;
+  color: #fff;
+  border: 1px solid @theme;
+  background-color: @theme;
+}
+.pagination ul a,.pg-1 a,.pg-1 .current{
+  display: inline-block;
+  margin:0 5px 8px;
+  padding: 2px 7px;
+  color: #7e7e7e;
+  border: 1px solid #dbdbdb;
+}
+.pagination ul li.active a,.pg-1 .current{
+  color: #fff;
+  border: 1px solid @theme;
+  background-color: @theme;
+}
+.pagination ul li a:hover,.pg-1 a：hover{
+  color: @theme;
+}
+
+.copyright{
+  background: @theme;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+}
+/*回到头部*/
+
+.go_top {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 85%;
+  right: 10px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.go_top img {
+  width: 100%;
+}
+
+/*public----------------------------------------------------public*/
+/*头部*/
+.header{
+  width: 100%;
+  background: url("../img/header.png") no-repeat;
+  background-size: 100% 100%;
+  .row{
+    display: flex;
+    align-items: center;
+  }
+  .navBg{
+    padding-top: 30px;
+    img{
+      width: 80%;
+    }
+  }
+  .logo{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+/*内容*/
+.content{
+  background: white;
+  padding: 25px;
+  margin: 10px auto;
+  .top_header{
+    display: flex;
+    justify-content: space-between;
+    background: url("../img/daohang.png");
+    background-size: 100% 100%;
+    align-items: center;
+    padding: 0 15px;
+    h4{
+      padding: 15px 0;
+      font-size: 16px;
+    }
+    a{
+      font-size: 12px;
+    }
+  }
+  .listBox{
+    padding: 0 10px;
+    border: 1px solid #e8e8e8;
+    ul li a{
+      display: flex;
+      align-items: center;
+      line-height: 35px;
+      p,span{
+        color: #000000;
+      }
+      .title{
+        flex: 1;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+      .iconfont{
+        width: 20px;
+      }
+      .time{
+        width: 60px;
+        text-align: right;
+      }
+    }
+  }
+  .server{
+    display: flex;
+
+    .left{
+      height: 224px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      background: @theme;
+      &>div{
+        text-align: center;
+      }
+      p{
+        margin: 0 auto;
+        font-size: 20px;
+        width: 15px;
+        text-align: center;
+      }
+      a{
+        display: block;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      a{
+        display: block;
+        color: #2a2a2a;
+        text-align: center;
+      }
+    }
+  }
+  .job{
+    width: 100%;
+    height: 224px;
+    display: flex;align-items: center;
+    justify-content: center;
+    background: url("../img/job.png");
+    background-size: 100% 100%;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 8px;
+  }
+  .viedo{
+    .videoImg{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .phone{
+    .phoneBox{
+      padding-top: 10px;
+      &>div{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .icon{
+          display: block;
+          width: 25px;
+          height: 25px;
+          background: url("../img/icon.png");
+          margin-right: 10px;
+          &.i4{
+            background-position-y: -42px;
+          }
+          &.i5{
+            background-position-y: -78px;
+          }
+          &.i6{
+            background-position-y: -113px;
+          }
+        }
+        .txt{
+          color: #2a2a2a;
+        }
+      }
+    }
+  }
+}
+
+
+.footer{
+  background: @theme;
+  padding: 15px 0;
+  .row>div{
+    margin-bottom: 15px;
+  }
+  .link{
+    display: flex;
+    align-items: center;
+    a{
+      display: block;
+      color: white;
+      position: relative;
+      padding: 10px 20px;
+      &::after{
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 15px;
+        right: 0;
+        background: white;
+      }
+      &:hover{
+        color:red;
+      }
+    }
+    & :last-child:after{
+      background: none;
+    }
+  }
+  .logo{
+    img {
+      width: 100%
+    }
+  }
+  .touch{
+    color: white;
+    p{
+      line-height: 30px;
+    }
+  }
+  .ewm{
+    display: flex;
+    flex: 1;
+    div{
+      margin-right: 15px;
+    }
+    img{
+      width: 100%;
+    }
+    p{
+      color: white;
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+}
+/*-------------------内容列表页页----------------------*/

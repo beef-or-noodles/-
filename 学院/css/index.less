@@ -6,6 +6,81 @@ a{
   color: #2a2a2a;
   font-size: 12px;
 }
+ul{
+  padding: 0;
+  margin: 0;
+}
+p,h1,h2,h3,h4,h5,div,a{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style:none;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  background: #d1d1d1;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  border-radius: 10px;
+  background: white;
+}
+
+
+.pagination{
+  width: 100%;
+  text-align: center;
+}
+.pagination ul span,.pg-1 .total{
+  display: inline-block;
+  height: 24px;
+  padding: 0 15px;
+  color: #fff;
+  border: 1px solid #990002;
+  background-color: #990002;
+}
+.pagination ul a,.pg-1 a,.pg-1 .current{
+  display: inline-block;
+  margin:0 5px 8px;
+  padding: 2px 7px;
+  color: #7e7e7e;
+  border: 1px solid #dbdbdb;
+}
+.pagination ul li.active a,.pg-1 .current{
+  color: #fff;
+  border: 1px solid #990002;
+  background-color: #990002;
+}
+.pagination ul li a:hover,.pg-1 a：hover{
+  color: #990002;
+}
+/*回到头部*/
+
+.go_top {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 85%;
+  right: 10px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.go_top img {
+  width: 100%;
+}
+/*--------public----------------------------------------------------------public-*/
+
 .row {
   .col-md-5,.col-md-2{
     padding-left: 5px;
@@ -26,17 +101,6 @@ a{
   &:hover{
     color: #007dce;
   }
-}
-ul{
-  padding: 0;
-  margin: 0;
-}
-p,h1,h2,h3,h4,h5,div,a{
-  margin: 0;
-  padding: 0;
-}
-li{
-  list-style:none;
 }
 .overflow(@line:1){
   overflow : hidden;
@@ -579,70 +643,6 @@ li{
 
   }
 }
-
-.pagination{
-  width: 100%;
-  text-align: center;
-}
-.pagination ul span,.pg-1 .total{
-  display: inline-block;
-  height: 24px;
-  padding: 0 15px;
-  color: #fff;
-  border: 1px solid #990002;
-  background-color: #990002;
-}
-.pagination ul a,.pg-1 a,.pg-1 .current{
-  display: inline-block;
-  margin:0 5px 8px;
-  padding: 2px 7px;
-  color: #7e7e7e;
-  border: 1px solid #dbdbdb;
-}
-.pagination ul li.active a,.pg-1 .current{
-  color: #fff;
-  border: 1px solid #990002;
-  background-color: #990002;
-}
-.pagination ul li a:hover,.pg-1 a：hover{
-  color: #990002;
-}
-/*回到头部*/
-
-.go_top {
-  width: 35px;
-  height: 35px;
-  position: fixed;
-  top: 85%;
-  right: 10px;
-  cursor: pointer;
-  z-index: 99;
-}
-
-.go_top img {
-  width: 100%;
-}
-
-
-
-::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 6px;
-  /*高宽分别对应横竖滚动条的尺寸*/
-  height: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
-  background: #d1d1d1;
-}
-
-::-webkit-scrollbar-track {
-  /*滚动条里面轨道*/
-  border-radius: 10px;
-  background: white;
-}
-
 
 
 /*swiper*/
