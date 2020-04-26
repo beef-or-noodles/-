@@ -40,7 +40,7 @@ a:hover, a:visited, a:link, a:active {
     padding-left: 15px !important;
 }
 .navbar-header {
-    background:#990002 !important;
+    background:#00468c !important;
 }
 .navbar-brand{
     color: white !important;
@@ -48,7 +48,7 @@ a:hover, a:visited, a:link, a:active {
     font-size: 14px;
 }
 .navbar-header {
-    background: #990002 !important;
+    background: #00468c !important;
 }
 
 .navbar-brand{
@@ -97,9 +97,14 @@ a:hover, a:visited, a:link, a:active {
 .nav>li>a::after{
     content: "";
     position: absolute;
-    height: 16px;
+    height: 18px;
     right: 0;
+    width: 1px;
     top: 15px;
+    background-color: white;
+}
+.nav>li:last-child>a::after{
+    background: none;
 }
 .daohang .nav>li:hover>a {
     background: url("../img/navactive.png");
@@ -115,7 +120,7 @@ a:hover, a:visited, a:link, a:active {
 }
 .list_n{
     margin-bottom: 90px;
-    background-color: rgba(231, 223, 226, 0.8);
+    background-color: rgba(231, 223, 226, 1);
 }
 .list_a li {
     line-height: 45px;
@@ -131,12 +136,6 @@ a:hover, a:visited, a:link, a:active {
 }
 .nav>li .list_a{
     text-align: center;
-}
-.nav>li:nth-child(-n+3) .list_a{
-    text-align: left;
-}
-.nav>li:nth-child(n+8) .list_a{
-    text-align: right;
 }
 .list_a li a:hover {
     color: #00468c;

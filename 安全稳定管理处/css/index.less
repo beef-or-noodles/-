@@ -4,7 +4,7 @@ body{
 }
 a{
   text-decoration:none !important;
-  color: #2a2a2a;
+  color: #222222;
   font-size: 12px;
 }
 a:hover{
@@ -17,7 +17,6 @@ ul{
 p,h1,h2,h3,h4,h5,div,a{
   margin: 0;
   padding: 0;
-  color: white;
 }
 li{
   list-style:none;
@@ -45,7 +44,7 @@ li{
   background: white;
 }
 
-@theme: #00468c;
+@theme: #01478e;
 .pagination{
   width: 100%;
   text-align: center;
@@ -75,7 +74,7 @@ li{
 }
 
 .copyright{
-  background: @theme;
+  background:#00468c;
   color: white;
   font-size: 12px;
   text-align: center;
@@ -110,6 +109,7 @@ li{
   }
   .navBg{
     padding-top: 30px;
+    text-align: right;
     img{
       width: 80%;
     }
@@ -125,7 +125,7 @@ li{
 /*内容*/
 .content{
   background: white;
-  padding: 25px;
+  padding: 10px 20px;
   margin: 10px auto;
   .top_header{
     display: flex;
@@ -134,23 +134,39 @@ li{
     background-size: 100% 100%;
     align-items: center;
     padding: 0 15px;
+    color: white;
     h4{
       padding: 15px 0;
       font-size: 16px;
     }
     a{
       font-size: 12px;
+      color: white;
+      &:hover{
+        color:red;
+      }
     }
   }
   .listBox{
-    padding: 0 10px;
-    border: 1px solid #e8e8e8;
+    padding: 10px;
+    border: 1px solid #ececec;
     ul li a{
       display: flex;
       align-items: center;
       line-height: 35px;
       p,span{
-        color: #000000;
+        display: block;
+        color: #222222;
+        transition: all .36s ease;
+        font-size: 14px;
+      }
+      &:hover{
+        p,span{
+          color: @theme;
+        }
+        .iconfont{
+          width: 15px;
+        }
       }
       .title{
         flex: 1;
@@ -160,23 +176,24 @@ li{
       }
       .iconfont{
         width: 20px;
+        transition: all .36s ease;
       }
       .time{
-        width: 60px;
+        width: 40px;
         text-align: right;
       }
     }
   }
   .server{
     display: flex;
-
     .left{
-      height: 224px;
+      height: 242px;
       display: flex;
       align-items: center;
       justify-content: center;
       width: 80px;
       background: @theme;
+      color: white;
       &>div{
         text-align: center;
       }
@@ -185,11 +202,16 @@ li{
         font-size: 20px;
         width: 15px;
         text-align: center;
+        line-height: 40px;
       }
       a{
         display: block;
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 20px;
+        color: white;
+        &:hover{
+          color: red;
+        }
       }
     }
     .right{
@@ -197,26 +219,38 @@ li{
       align-items: center;
       justify-content: center;
       flex: 1;
+      background: url("../img/erverbg.png");
+      background-size: 100% 100%;
       a{
         display: block;
-        color: #2a2a2a;
+        color: #024a92;
         text-align: center;
+        margin-bottom: 20px;
+        font-size: 16px;
+        &:hover{
+          color: red;
+        }
       }
     }
   }
   .job{
     width: 100%;
-    height: 224px;
+    height: 242px;
     display: flex;align-items: center;
     justify-content: center;
     background: url("../img/job.png");
     background-size: 100% 100%;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 8px;
+    a{
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 8px;
+      color: white;
+    }
   }
   .viedo{
     .videoImg{
+      height: 192px;
+      overflow: hidden;
       img{
         width: 100%;
       }
@@ -225,10 +259,12 @@ li{
   .phone{
     .phoneBox{
       padding-top: 10px;
+      border: 1px solid #ececec;
+      padding-left: 15px;
       &>div{
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         .icon{
           display: block;
           width: 25px;
@@ -246,16 +282,15 @@ li{
           }
         }
         .txt{
-          color: #2a2a2a;
+          color: #222222;
         }
       }
     }
   }
 }
 
-
 .footer{
-  background: @theme;
+  background: #0460bc;
   padding: 15px 0;
   .row>div{
     margin-bottom: 15px;
@@ -264,16 +299,21 @@ li{
     display: flex;
     align-items: center;
     a{
+      &:first-child{
+        padding-left: 0;
+      }
       display: block;
       color: white;
       position: relative;
-      padding: 10px 20px;
+      padding: 10px 50px;
+      font-size: 16px;
       &::after{
         position: absolute;
         content: "";
         width: 1px;
         height: 15px;
         right: 0;
+        top: 15px;
         background: white;
       }
       &:hover{
@@ -291,6 +331,8 @@ li{
   }
   .touch{
     color: white;
+    padding-left: 20px;
+    padding-top: 10px;
     p{
       line-height: 30px;
     }
@@ -298,17 +340,165 @@ li{
   .ewm{
     display: flex;
     flex: 1;
+    .ibox{
+      display: flex;
+      align-items: center;
+    }
     div{
-      margin-right: 15px;
+      margin-right: 8px;
     }
     img{
       width: 100%;
     }
     p{
       color: white;
-      margin-top: 15px;
+      margin-top: 10px;
       text-align: center;
+      font-size: 12px;
     }
   }
 }
 /*-------------------内容列表页页----------------------*/
+.contentPage{
+  background-color: #e4e8ee;
+  padding-bottom: 20px;
+}
+.contentBox{
+  .pcleftNav{
+    background-color: white;
+    margin-top: 20px;
+    .top{
+      background-color: @theme;
+      color: white;
+      line-height: 50px;
+      font-size: 18px;
+      text-align: left;
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .iconfont{
+        font-size: 18px;
+        flex: 1;
+        text-align: right;
+        margin-right: 15px;
+      }
+    }
+    ul{
+      padding-bottom: 10px;
+      li{
+        padding: 0 10px;
+        a{
+          display: block;
+          text-align: left;
+          padding-left: 20px;
+          border-bottom: 1px dashed #d1d1d1;
+          line-height:40px;
+          font-size: 15px;
+          color: #636363;
+          &:hover{
+            color: @theme;
+            border-bottom-color: @theme;
+          }
+        }
+      }
+    }
+  }
+  .right{
+    background-color: white;
+    margin-top: 20px;
+    min-height: 400px;
+    .top{
+      display: flex;
+      padding-top: 15px;
+      align-items: center;
+      border-bottom: 1px solid #e4e4e4;
+      h4{
+        margin-left: 20px;
+        border-bottom: 3px solid @theme;
+        padding-bottom: 10px;
+        margin-bottom: -2px;
+      }
+      .link{
+        flex: 1;
+        text-align: right;
+        margin-right: 20px;
+      }
+    }
+    .artice{
+      padding: 20px;
+      .title{
+        font-size: 20px;
+        text-align: center;
+      }
+      .abs{
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+        color: #9d9d9d;
+      }
+      .contentAtice{
+        table{
+          width: 100% !important;
+        }
+        img{
+          max-width: 100% !important;
+          height: auto;
+        }
+      }
+    }
+    .list{
+      padding:0 15px;
+      li{
+        a{
+          display: flex;
+          align-items: center;
+          padding: 15px 0px;
+          border-bottom: 1px dashed #9d9d9d;
+          span{
+            margin-right: 15px;
+            transition: all .36s ease;
+            font-size: 12px;
+          }
+          .title{
+            flex: 1;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+          }
+          .time{
+            margin-right: 10px;
+          }
+          &:hover{
+            color: @theme;
+            span{
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 990px){
+  .footer .link a{
+    padding: 10px 20px;
+  }
+  .contentBox .pcleftNav .top{
+    margin-top: 60px;
+  }
+  .logo{
+    display: none;
+  }
+  .touch{
+    padding: 0 0 0 15px!important;
+  }
+  .ewm{
+    display: none !important;
+  }
+  .list-inline>li{
+    padding: 0;
+  }
+}
