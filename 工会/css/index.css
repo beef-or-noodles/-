@@ -4,7 +4,7 @@ body {
 }
 a {
   text-decoration: none !important;
-  color: #2a2a2a;
+  color: #222222;
   font-size: 12px;
 }
 a:hover {
@@ -24,7 +24,6 @@ div,
 a {
   margin: 0;
   padding: 0;
-  color: white;
 }
 li {
   list-style: none;
@@ -58,8 +57,8 @@ li {
   height: 24px;
   padding: 0 15px;
   color: #fff;
-  border: 1px solid #00468c;
-  background-color: #00468c;
+  border: 1px solid #01478e;
+  background-color: #01478e;
 }
 .pagination ul a,
 .pg-1 a,
@@ -73,12 +72,12 @@ li {
 .pagination ul li.active a,
 .pg-1 .current {
   color: #fff;
-  border: 1px solid #00468c;
-  background-color: #00468c;
+  border: 1px solid #01478e;
+  background-color: #01478e;
 }
 .pagination ul li a:hover,
 .pg-1 a：hover {
-  color: #00468c;
+  color: #01478e;
 }
 .copyright {
   background: #00468c;
@@ -114,6 +113,7 @@ li {
 }
 .header .navBg {
   padding-top: 30px;
+  text-align: right;
 }
 .header .navBg img {
   width: 80%;
@@ -127,15 +127,17 @@ li {
 /*内容*/
 .content {
   background: white;
-  padding: 25px;
+  padding: 10px 20px;
   margin: 10px auto;
 }
 .content .top_header {
   display: flex;
   justify-content: space-between;
-  background: #00468c;
+  background: url("../img/daohang.png");
+  background-size: 100% 100%;
   align-items: center;
   padding: 0 15px;
+  color: white;
 }
 .content .top_header h4 {
   padding: 15px 0;
@@ -143,10 +145,14 @@ li {
 }
 .content .top_header a {
   font-size: 12px;
+  color: white;
+}
+.content .top_header a:hover {
+  color: red;
 }
 .content .listBox {
-  padding: 0 10px;
-  border: 1px solid #e8e8e8;
+  padding: 10px;
+  border: 1px solid #ececec;
 }
 .content .listBox ul li a {
   display: flex;
@@ -155,7 +161,17 @@ li {
 }
 .content .listBox ul li a p,
 .content .listBox ul li a span {
-  color: #000000;
+  display: block;
+  color: #222222;
+  transition: all 0.36s ease;
+  font-size: 14px;
+}
+.content .listBox ul li a:hover p,
+.content .listBox ul li a:hover span {
+  color: #01478e;
+}
+.content .listBox ul li a:hover .iconfont {
+  width: 15px;
 }
 .content .listBox ul li a .title {
   flex: 1;
@@ -165,21 +181,23 @@ li {
 }
 .content .listBox ul li a .iconfont {
   width: 20px;
+  transition: all 0.36s ease;
 }
 .content .listBox ul li a .time {
-  width: 60px;
+  width: 40px;
   text-align: right;
 }
 .content .server {
   display: flex;
 }
 .content .server .left {
-  height: 224px;
+  height: 242px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 80px;
-  background: #00468c;
+  background: #01478e;
+  color: white;
 }
 .content .server .left > div {
   text-align: center;
@@ -189,45 +207,66 @@ li {
   font-size: 20px;
   width: 15px;
   text-align: center;
+  line-height: 40px;
 }
 .content .server .left a {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 20px;
+  color: white;
+}
+.content .server .left a:hover {
+  color: red;
 }
 .content .server .right {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
+  background: url("../img/erverbg.png");
+  background-size: 100% 100%;
 }
 .content .server .right a {
   display: block;
-  color: #2a2a2a;
+  color: #024a92;
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.content .server .right a:hover {
+  color: red;
 }
 .content .job {
   width: 100%;
-  height: 224px;
+  height: 242px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: url("../img/job.png");
   background-size: 100% 100%;
+}
+.content .job a {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 8px;
+  color: white;
+}
+.content .viedo .videoImg {
+  height: 192px;
+  overflow: hidden;
 }
 .content .viedo .videoImg img {
   width: 100%;
 }
 .content .phone .phoneBox {
   padding-top: 10px;
+  border: 1px solid #ececec;
+  padding-left: 15px;
 }
 .content .phone .phoneBox > div {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .content .phone .phoneBox > div .icon {
   display: block;
@@ -246,10 +285,10 @@ li {
   background-position-y: -113px;
 }
 .content .phone .phoneBox > div .txt {
-  color: #2a2a2a;
+  color: #222222;
 }
 .footer {
-  background: #00468c;
+  background: #0460bc;
   padding: 15px 0;
 }
 .footer .row > div {
@@ -263,7 +302,11 @@ li {
   display: block;
   color: white;
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 50px;
+  font-size: 16px;
+}
+.footer .link a:first-child {
+  padding-left: 0;
 }
 .footer .link a::after {
   position: absolute;
@@ -271,6 +314,7 @@ li {
   width: 1px;
   height: 15px;
   right: 0;
+  top: 15px;
   background: white;
 }
 .footer .link a:hover {
@@ -284,6 +328,8 @@ li {
 }
 .footer .touch {
   color: white;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 .footer .touch p {
   line-height: 30px;
@@ -292,16 +338,157 @@ li {
   display: flex;
   flex: 1;
 }
+.footer .ewm .ibox {
+  display: flex;
+  align-items: center;
+}
 .footer .ewm div {
-  margin-right: 15px;
+  margin-right: 8px;
 }
 .footer .ewm img {
   width: 100%;
 }
 .footer .ewm p {
   color: white;
-  margin-top: 15px;
+  margin-top: 10px;
   text-align: center;
+  font-size: 12px;
 }
 /*-------------------内容列表页页----------------------*/
+.contentPage {
+  background-color: #e4e8ee;
+  padding-bottom: 20px;
+}
+.contentBox .pcleftNav {
+  background-color: white;
+  margin-top: 20px;
+}
+.contentBox .pcleftNav .top {
+  background-color: #01478e;
+  color: white;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentBox .pcleftNav .top .iconfont {
+  font-size: 18px;
+  flex: 1;
+  text-align: right;
+  margin-right: 15px;
+}
+.contentBox .pcleftNav ul {
+  padding-bottom: 10px;
+}
+.contentBox .pcleftNav ul li {
+  padding: 0 10px;
+}
+.contentBox .pcleftNav ul li a {
+  display: block;
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 1px dashed #d1d1d1;
+  line-height: 40px;
+  font-size: 15px;
+  color: #636363;
+}
+.contentBox .pcleftNav ul li a:hover {
+  color: #01478e;
+  border-bottom-color: #01478e;
+}
+.contentBox .right {
+  background-color: white;
+  margin-top: 20px;
+  min-height: 400px;
+}
+.contentBox .right .top {
+  display: flex;
+  padding-top: 15px;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+.contentBox .right .top h4 {
+  margin-left: 20px;
+  border-bottom: 3px solid #01478e;
+  padding-bottom: 10px;
+  margin-bottom: -2px;
+}
+.contentBox .right .top .link {
+  flex: 1;
+  text-align: right;
+  margin-right: 20px;
+}
+.contentBox .right .artice {
+  padding: 20px;
+}
+.contentBox .right .artice .title {
+  font-size: 20px;
+  text-align: center;
+}
+.contentBox .right .artice .abs {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  color: #9d9d9d;
+}
+.contentBox .right .artice .contentAtice table {
+  width: 100% !important;
+}
+.contentBox .right .artice .contentAtice img {
+  max-width: 100% !important;
+  height: auto;
+}
+.contentBox .right .list {
+  padding: 0 15px;
+}
+.contentBox .right .list li a {
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+  border-bottom: 1px dashed #9d9d9d;
+}
+.contentBox .right .list li a span {
+  margin-right: 15px;
+  transition: all 0.36s ease;
+  font-size: 12px;
+}
+.contentBox .right .list li a .title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.contentBox .right .list li a .time {
+  margin-right: 10px;
+}
+.contentBox .right .list li a:hover {
+  color: #01478e;
+}
+.contentBox .right .list li a:hover span {
+  margin-left: 5px;
+}
+@media (max-width: 990px) {
+  .footer .link a {
+    padding: 10px 20px;
+  }
+  .contentBox .pcleftNav .top {
+    margin-top: 60px;
+  }
+  .logo {
+    display: none;
+  }
+  .touch {
+    padding: 0 0 0 15px!important;
+  }
+  .ewm {
+    display: none !important;
+  }
+  .list-inline > li {
+    padding: 0;
+  }
+}
 /*# sourceMappingURL=index.css.map */
