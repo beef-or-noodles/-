@@ -136,6 +136,10 @@ a:hover, a:visited, a:link, a:active {
 }
 .nav>li .list_a{
     text-align: center;
+    width: 100%;
+}
+.nav>li:nth-child(5) .list_a{
+    text-align: right;
 }
 .list_a li a:hover {
     color: #00468c;
