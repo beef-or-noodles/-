@@ -49,4 +49,76 @@ $(".img li").eq(index).stop().fadeIn(/*淡入*/).siblings().stop().fadeOut(/*淡
 	$(".out .right").click(function(){
 		move()
 		})
+
+
+	/*导航显示*/
+	$("#daohang>li").hover(function(){
+		var width = $(this).width()
+		var len = $(this).index()
+		var left = width * len
+/*		var ulWidth =  $(this).find(".nav_two ul").width()*/
+		$(this).find(".nav_two ul").css('paddingLeft',left+'px')
+	})
+
+		/*导航显示隐藏*/
+		var width = $(window).width();
+		var off = true
+		$('#plus').hide()
+		$('#minus').hide()
+		if(width<992){
+			$('#plus').show()
+			$(".navClick").slideToggle()
+			$('#top').click(function(){
+				$(".navClick").slideToggle()
+				if(off){
+					$('#plus').hide()
+					$('#minus').show()
+					off = false
+				}else{
+					$('#plus').show()
+					$('#minus').hide()
+					off = true
+				}
+			})
+		}
+
+
+		// 回到头部
+		var backButton = $('#gotop');
+		function backToTop() {
+			$('html,body').animate({
+				scrollTop: 0
+			}, 800);
+		}
+		backButton.on('click', backToTop);
+		$(window).on('scroll', function () { /*当滚动条的垂直位置大于浏览器所能看到的页面的那部分的高度时，回到顶部按钮就显示 */
+			if ($(window).scrollTop() > $(window).height()) {
+				backButton.fadeIn();
+			} else {
+				backButton.fadeOut();
+			}
+		});
+		$(window).trigger('scroll'); /*触发滚动事件，避免刷新的时候显示回到顶部按钮*/
+
+		try {
+			//图片滚动
+			var speed = 50
+			marquePic2.innerHTML = marquePic1.innerHTML
+			function Marquee() {
+				if(demo.scrollLeft >= marquePic1.scrollWidth) {
+					demo.scrollLeft = 0
+				} else {
+					demo.scrollLeft++
+				}
+			}
+			var MyMar = setInterval(Marquee, speed)
+			demo.onmouseover = function() {
+				clearInterval(MyMar)
+			}
+			demo.onmouseout = function() {
+				MyMar = setInterval(Marquee, speed)
+			}
+		}catch (e) {
+
+		}
 });

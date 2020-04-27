@@ -1,14 +1,10 @@
 body{
   font-family: MicrosoftYaHei;
-  background: #eff8ff;
 }
 a{
   text-decoration:none !important;
-  color: #222222;
   font-size: 12px;
-}
-a:hover{
-  color: red;
+  color: #222222;
 }
 ul{
   padding: 0;
@@ -20,10 +16,6 @@ p,h1,h2,h3,h4,h5,div,a{
 }
 li{
   list-style:none;
-}
-.row>div{
-  padding: 0 5px;
-  margin: 10px 0;
 }
 
 ::-webkit-scrollbar {
@@ -44,7 +36,7 @@ li{
   background: white;
 }
 
-@theme: #01478e;
+@theme: #cf0f00;
 .pagination{
   width: 100%;
   text-align: center;
@@ -73,14 +65,6 @@ li{
   color: @theme;
 }
 
-.copyright{
-  background:#00468c;
-  color: white;
-  font-size: 12px;
-  text-align: center;
-  padding: 15px 0;
-  width: 100%;
-}
 /*回到头部*/
 
 .go_top {
@@ -101,17 +85,15 @@ li{
 /*头部*/
 .header{
   width: 100%;
-  background: url("../img/header.png") no-repeat;
-  background-size: 100% 100%;
+  background: #bf0606;
   .row{
     display: flex;
     align-items: center;
   }
   .navBg{
-    padding-top: 30px;
     text-align: right;
     img{
-      width: 80%;
+      width: 60%;
     }
   }
   .logo{
@@ -124,28 +106,66 @@ li{
 
 /*内容*/
 .content{
-  background: white;
   padding: 10px 20px;
   margin: 10px auto;
+  .col-md-3{
+    margin-top: 10px;
+  }
+  .row>div{
+    padding: 0 5px;
+  }
+  .show{
+   margin-top: 15px;
+  }
+  .row>div:last-child{
+    .top_header{
+      padding-right: 0;
+      position: relative;
+      a{
+        position: absolute;
+        display: block;
+        background: black !important;
+        border: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        right: 0;
+        &:hover{
+          color: @theme;
+        }
+      }
+    }
+
+    .listBox{
+      background:#e3e4e6 ;
+    }
+
+  }
   .top_header{
     display: flex;
     justify-content: space-between;
-    background: url("../img/daohang.png");
-    background-size: 100% 100%;
+    background: @theme;
     align-items: center;
     padding: 0 15px;
     color: white;
     h4{
-      padding: 15px 0;
+      padding: 10px 0;
       font-size: 16px;
     }
     a{
       font-size: 12px;
       color: white;
+      border-bottom: 1px solid white;
       &:hover{
-        color:red;
+        color:black;
+        border-bottom: 1px solid black ;
       }
     }
+  }
+  .news-lunbo{
+    padding: 5px;
+    border: 1px solid #ececec;
   }
   .listBox{
     padding: 10px;
@@ -175,8 +195,12 @@ li{
         white-space:nowrap;
       }
       .iconfont{
-        width: 20px;
+        width: 10px;
+        height: 10px;
         transition: all .36s ease;
+        background: url("../img/icon.png") no-repeat;
+        background-position: center center;
+        margin-right: 10px;
       }
       .time{
         width: 40px;
@@ -184,178 +208,40 @@ li{
       }
     }
   }
-  .server{
-    display: flex;
-    .left{
-      height: 242px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80px;
-      background: @theme;
-      color: white;
-      &>div{
-        text-align: center;
-      }
-      p{
-        margin: 0 auto;
-        font-size: 20px;
-        width: 15px;
-        text-align: center;
-        line-height: 40px;
-      }
-      a{
-        display: block;
-        font-size: 14px;
-        margin-top: 20px;
-        color: white;
-        &:hover{
-          color: red;
-        }
-      }
-    }
-    .right{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-      background: url("../img/erverbg.png");
-      background-size: 100% 100%;
-      a{
-        display: block;
-        color: #024a92;
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 16px;
-        &:hover{
-          color: red;
-        }
-      }
-    }
+  /*图片展示区*/
+  #demo{
+    width:100%; overflow:hidden; margin:0px auto;
+    border:1px solid #ececec;
   }
-  .job{
-    width: 100%;
-    height: 242px;
-    display: flex;align-items: center;
-    justify-content: center;
-    background: url("../img/job.png");
-    background-size: 100% 100%;
-    a{
-      font-size: 22px;
-      font-weight: bold;
-      letter-spacing: 8px;
-      color: white;
-    }
+  #demo a{
+    color: #9a9797;
+    text-decoration: none;
   }
-  .viedo{
-    .videoImg{
-      height: 192px;
-      overflow: hidden;
-      img{
-        width: 100%;
-      }
-    }
+  #demo td{
+    padding: 5px;
+    background-color: white;
   }
-  .phone{
-    .phoneBox{
-      padding-top: 10px;
-      border: 1px solid #ececec;
-      padding-left: 15px;
-      &>div{
-        display: flex;
-        align-items: center;
-        margin-bottom: 5px;
-        .icon{
-          display: block;
-          width: 25px;
-          height: 25px;
-          background: url("../img/icon.png");
-          margin-right: 10px;
-          &.i4{
-            background-position-y: -42px;
-          }
-          &.i5{
-            background-position-y: -78px;
-          }
-          &.i6{
-            background-position-y: -113px;
-          }
-        }
-        .txt{
-          color: #222222;
-        }
-      }
-    }
+
+  #demo a:hover{
+    color: #007dd0;
   }
+  .showimg {
+    margin-top: 10px;
+    border: 1px solid #c2c2c2;
+    margin-left: 3px !important;
+
+  }
+
 }
 
 .footer{
-  background: #0460bc;
+  border-top: 8px solid @theme;
+  background: #373737;
   padding: 15px 0;
-  .row>div{
-    margin-bottom: 15px;
-  }
-  .link{
-    display: flex;
-    align-items: center;
-    a{
-      &:first-child{
-        padding-left: 0;
-      }
-      display: block;
-      color: white;
-      position: relative;
-      padding: 10px 50px;
-      font-size: 16px;
-      &::after{
-        position: absolute;
-        content: "";
-        width: 1px;
-        height: 15px;
-        right: 0;
-        top: 15px;
-        background: white;
-      }
-      &:hover{
-        color:red;
-      }
-    }
-    & :last-child:after{
-      background: none;
-    }
-  }
-  .logo{
-    img {
-      width: 100%
-    }
-  }
-  .touch{
-    color: white;
-    padding-left: 20px;
-    padding-top: 10px;
-    p{
-      line-height: 30px;
-    }
-  }
-  .ewm{
-    display: flex;
-    flex: 1;
-    .ibox{
-      display: flex;
-      align-items: center;
-    }
-    div{
-      margin-right: 8px;
-    }
-    img{
-      width: 100%;
-    }
-    p{
-      color: white;
-      margin-top: 10px;
-      text-align: center;
-      font-size: 12px;
-    }
+  color:#cccccc;
+  font-size: 14px;
+  p{
+   padding: 8px 0;
   }
 }
 /*-------------------内容列表页页----------------------*/
@@ -483,20 +369,17 @@ li{
 }
 
 @media(max-width: 990px){
-  .footer .link a{
-    padding: 10px 20px;
+  .content{
+    margin-top: 50px;
   }
   .contentBox .pcleftNav .top{
     margin-top: 60px;
   }
-  .logo{
-    display: none;
+  .contentBox .right{
+    margin-top: 0;
   }
-  .touch{
-    padding: 0 0 0 15px!important;
-  }
-  .ewm{
-    display: none !important;
+  .footer{
+    padding-left: 0;
   }
   .list-inline>li{
     padding: 0;

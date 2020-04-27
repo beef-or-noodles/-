@@ -1,14 +1,10 @@
 body {
   font-family: MicrosoftYaHei;
-  background: #eff8ff;
 }
 a {
   text-decoration: none !important;
-  color: #222222;
   font-size: 12px;
-}
-a:hover {
-  color: red;
+  color: #222222;
 }
 ul {
   padding: 0;
@@ -27,10 +23,6 @@ a {
 }
 li {
   list-style: none;
-}
-.row > div {
-  padding: 0 5px;
-  margin: 10px 0;
 }
 ::-webkit-scrollbar {
   /*滚动条整体样式*/
@@ -57,8 +49,8 @@ li {
   height: 24px;
   padding: 0 15px;
   color: #fff;
-  border: 1px solid #01478e;
-  background-color: #01478e;
+  border: 1px solid #cf0f00;
+  background-color: #cf0f00;
 }
 .pagination ul a,
 .pg-1 a,
@@ -72,20 +64,12 @@ li {
 .pagination ul li.active a,
 .pg-1 .current {
   color: #fff;
-  border: 1px solid #01478e;
-  background-color: #01478e;
+  border: 1px solid #cf0f00;
+  background-color: #cf0f00;
 }
 .pagination ul li a:hover,
 .pg-1 a：hover {
-  color: #01478e;
-}
-.copyright {
-  background: #00468c;
-  color: white;
-  font-size: 12px;
-  text-align: center;
-  padding: 15px 0;
-  width: 100%;
+  color: #cf0f00;
 }
 /*回到头部*/
 .go_top {
@@ -104,19 +88,17 @@ li {
 /*头部*/
 .header {
   width: 100%;
-  background: url("../img/header.png") no-repeat;
-  background-size: 100% 100%;
+  background: #bf0606;
 }
 .header .row {
   display: flex;
   align-items: center;
 }
 .header .navBg {
-  padding-top: 30px;
   text-align: right;
 }
 .header .navBg img {
-  width: 80%;
+  width: 60%;
 }
 .header .logo {
   width: 100%;
@@ -126,29 +108,64 @@ li {
 }
 /*内容*/
 .content {
-  background: white;
   padding: 10px 20px;
   margin: 10px auto;
+  /*图片展示区*/
+}
+.content .col-md-3 {
+  margin-top: 10px;
+}
+.content .row > div {
+  padding: 0 5px;
+}
+.content .show {
+  margin-top: 15px;
+}
+.content .row > div:last-child .top_header {
+  padding-right: 0;
+  position: relative;
+}
+.content .row > div:last-child .top_header a {
+  position: absolute;
+  display: block;
+  background: black !important;
+  border: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  right: 0;
+}
+.content .row > div:last-child .top_header a:hover {
+  color: #cf0f00;
+}
+.content .row > div:last-child .listBox {
+  background: #e3e4e6;
 }
 .content .top_header {
   display: flex;
   justify-content: space-between;
-  background: url("../img/daohang.png");
-  background-size: 100% 100%;
+  background: #cf0f00;
   align-items: center;
   padding: 0 15px;
   color: white;
 }
 .content .top_header h4 {
-  padding: 15px 0;
+  padding: 10px 0;
   font-size: 16px;
 }
 .content .top_header a {
   font-size: 12px;
   color: white;
+  border-bottom: 1px solid white;
 }
 .content .top_header a:hover {
-  color: red;
+  color: black;
+  border-bottom: 1px solid black ;
+}
+.content .news-lunbo {
+  padding: 5px;
+  border: 1px solid #ececec;
 }
 .content .listBox {
   padding: 10px;
@@ -168,7 +185,7 @@ li {
 }
 .content .listBox ul li a:hover p,
 .content .listBox ul li a:hover span {
-  color: #01478e;
+  color: #cf0f00;
 }
 .content .listBox ul li a:hover .iconfont {
   width: 15px;
@@ -180,179 +197,48 @@ li {
   white-space: nowrap;
 }
 .content .listBox ul li a .iconfont {
-  width: 20px;
+  width: 10px;
+  height: 10px;
   transition: all 0.36s ease;
+  background: url("../img/icon.png") no-repeat;
+  background-position: center center;
+  margin-right: 10px;
 }
 .content .listBox ul li a .time {
   width: 40px;
   text-align: right;
 }
-.content .server {
-  display: flex;
-}
-.content .server .left {
-  height: 242px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  background: #01478e;
-  color: white;
-}
-.content .server .left > div {
-  text-align: center;
-}
-.content .server .left p {
-  margin: 0 auto;
-  font-size: 20px;
-  width: 15px;
-  text-align: center;
-  line-height: 40px;
-}
-.content .server .left a {
-  display: block;
-  font-size: 14px;
-  margin-top: 20px;
-  color: white;
-}
-.content .server .left a:hover {
-  color: red;
-}
-.content .server .right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  background: url("../img/erverbg.png");
-  background-size: 100% 100%;
-}
-.content .server .right a {
-  display: block;
-  color: #024a92;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-.content .server .right a:hover {
-  color: red;
-}
-.content .job {
+.content #demo {
   width: 100%;
-  height: 242px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url("../img/job.png");
-  background-size: 100% 100%;
-}
-.content .job a {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 8px;
-  color: white;
-}
-.content .viedo .videoImg {
-  height: 192px;
   overflow: hidden;
-}
-.content .viedo .videoImg img {
-  width: 100%;
-}
-.content .phone .phoneBox {
-  padding-top: 10px;
+  margin: 0px auto;
   border: 1px solid #ececec;
-  padding-left: 15px;
 }
-.content .phone .phoneBox > div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
+.content #demo a {
+  color: #9a9797;
+  text-decoration: none;
 }
-.content .phone .phoneBox > div .icon {
-  display: block;
-  width: 25px;
-  height: 25px;
-  background: url("../img/icon.png");
-  margin-right: 10px;
+.content #demo td {
+  padding: 5px;
+  background-color: white;
 }
-.content .phone .phoneBox > div .icon.i4 {
-  background-position-y: -42px;
+.content #demo a:hover {
+  color: #007dd0;
 }
-.content .phone .phoneBox > div .icon.i5 {
-  background-position-y: -78px;
-}
-.content .phone .phoneBox > div .icon.i6 {
-  background-position-y: -113px;
-}
-.content .phone .phoneBox > div .txt {
-  color: #222222;
+.content .showimg {
+  margin-top: 10px;
+  border: 1px solid #c2c2c2;
+  margin-left: 3px !important;
 }
 .footer {
-  background: #0460bc;
+  border-top: 8px solid #cf0f00;
+  background: #373737;
   padding: 15px 0;
+  color: #cccccc;
+  font-size: 14px;
 }
-.footer .row > div {
-  margin-bottom: 15px;
-}
-.footer .link {
-  display: flex;
-  align-items: center;
-}
-.footer .link a {
-  display: block;
-  color: white;
-  position: relative;
-  padding: 10px 50px;
-  font-size: 16px;
-}
-.footer .link a:first-child {
-  padding-left: 0;
-}
-.footer .link a::after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 15px;
-  right: 0;
-  top: 15px;
-  background: white;
-}
-.footer .link a:hover {
-  color: red;
-}
-.footer .link :last-child:after {
-  background: none;
-}
-.footer .logo img {
-  width: 100%;
-}
-.footer .touch {
-  color: white;
-  padding-left: 20px;
-  padding-top: 10px;
-}
-.footer .touch p {
-  line-height: 30px;
-}
-.footer .ewm {
-  display: flex;
-  flex: 1;
-}
-.footer .ewm .ibox {
-  display: flex;
-  align-items: center;
-}
-.footer .ewm div {
-  margin-right: 8px;
-}
-.footer .ewm img {
-  width: 100%;
-}
-.footer .ewm p {
-  color: white;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 12px;
+.footer p {
+  padding: 8px 0;
 }
 /*-------------------内容列表页页----------------------*/
 .contentPage {
@@ -364,7 +250,7 @@ li {
   margin-top: 20px;
 }
 .contentBox .pcleftNav .top {
-  background-color: #01478e;
+  background-color: #cf0f00;
   color: white;
   line-height: 50px;
   font-size: 18px;
@@ -396,8 +282,8 @@ li {
   color: #636363;
 }
 .contentBox .pcleftNav ul li a:hover {
-  color: #01478e;
-  border-bottom-color: #01478e;
+  color: #cf0f00;
+  border-bottom-color: #cf0f00;
 }
 .contentBox .right {
   background-color: white;
@@ -412,7 +298,7 @@ li {
 }
 .contentBox .right .top h4 {
   margin-left: 20px;
-  border-bottom: 3px solid #01478e;
+  border-bottom: 3px solid #cf0f00;
   padding-bottom: 10px;
   margin-bottom: -2px;
 }
@@ -466,26 +352,23 @@ li {
   margin-right: 10px;
 }
 .contentBox .right .list li a:hover {
-  color: #01478e;
+  color: #cf0f00;
 }
 .contentBox .right .list li a:hover span {
   margin-left: 5px;
 }
 @media (max-width: 990px) {
-  .footer .link a {
-    padding: 10px 20px;
+  .content {
+    margin-top: 50px;
   }
   .contentBox .pcleftNav .top {
     margin-top: 60px;
   }
-  .logo {
-    display: none;
+  .contentBox .right {
+    margin-top: 0;
   }
-  .touch {
-    padding: 0 0 0 15px!important;
-  }
-  .ewm {
-    display: none !important;
+  .footer {
+    padding-left: 0;
   }
   .list-inline > li {
     padding: 0;
