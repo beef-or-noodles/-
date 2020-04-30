@@ -1,7 +1,7 @@
 
 /*新闻轮播*/
 .out {
-    height:242px;
+    height:244px;
     width: 100%;
     border: 1px solid #bfbfbf;
     position:relative;
@@ -47,8 +47,8 @@
 }
 .out .num {
     position:absolute;
-    bottom:-10px;
-    right:0;
+    top: 160px;
+    right:10px;
     font-size:0px;
     text-align:center;
     overflow: hidden;
@@ -56,7 +56,7 @@
 .num li {
     width:20px;
     height:20px;
-    background:#fbca09;
+    background: rgba(5,80,157,.5);
     color:#FFFFFF;
     text-align:center;
     line-height:20px;
@@ -82,7 +82,7 @@
 }
 .out .num li.active-1 {
     color: white;
-    background: #99cc00;
+    background:#05509d;
 }
 .out:hover .btn {
     display:block
