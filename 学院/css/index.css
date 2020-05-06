@@ -6,21 +6,6 @@ a {
   color: #2a2a2a;
   font-size: 12px;
 }
-.row .col-md-5,
-.row .col-md-2 {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-#lun .slideItem {
-  height: 120px;
-}
-#lun .slideItem img {
-  width: 100%;
-  height: 100%;
-}
-#hover:hover {
-  color: #007dce;
-}
 ul {
   padding: 0;
   margin: 0;
@@ -39,6 +24,82 @@ a {
 li {
   list-style: none;
 }
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  background: #d1d1d1;
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  border-radius: 10px;
+  background: white;
+}
+.pagination {
+  width: 100%;
+  text-align: center;
+}
+.pagination ul span,
+.pg-1 .total {
+  display: inline-block;
+  height: 24px;
+  padding: 0 15px;
+  color: #fff;
+  border: 1px solid #990002;
+  background-color: #990002;
+}
+.pagination ul a,
+.pg-1 a,
+.pg-1 .current {
+  display: inline-block;
+  margin: 0 5px 8px;
+  padding: 2px 7px;
+  color: #7e7e7e;
+  border: 1px solid #dbdbdb;
+}
+.pagination ul li.active a,
+.pg-1 .current {
+  color: #fff;
+  border: 1px solid #990002;
+  background-color: #990002;
+}
+.pagination ul li a:hover,
+.pg-1 a：hover {
+  color: #990002;
+}
+/*回到头部*/
+.go_top {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 85%;
+  right: 10px;
+  cursor: pointer;
+  z-index: 99;
+}
+.go_top img {
+  width: 100%;
+}
+/*--------public----------------------------------------------------------public-*/
+.row .col-md-5,
+.row .col-md-2 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#lun .slideItem {
+  height: 120px;
+}
+#lun .slideItem img {
+  width: 100%;
+  height: 100%;
+}
+#hover:hover {
+  color: #007dce;
+}
 /*
 * 首页
 */
@@ -52,6 +113,9 @@ li {
   align-items: center;
   top: 0;
   z-index: 120;
+}
+.header > .container {
+  width: 1350px;
 }
 .header .logo {
   width: 100%;
@@ -127,7 +191,7 @@ li {
   background: white;
 }
 .main .contentMain .box.pic .gropList2 {
-  margin-top: 10px;
+  margin-top: 13px;
   height: 92px;
   background: white;
 }
@@ -163,6 +227,7 @@ li {
   background: rgba(255, 255, 255, 0.9);
   padding: 0 10px;
   padding-bottom: 10px;
+  min-height: 232px;
 }
 .main .contentMain .box .gropBox > :not(:nth-child(1)) {
   display: none;
@@ -547,66 +612,6 @@ li {
     flex: 150% 1 1;
   }
 }
-.pagination {
-  width: 100%;
-  text-align: center;
-}
-.pagination ul span,
-.pg-1 .total {
-  display: inline-block;
-  height: 24px;
-  padding: 0 15px;
-  color: #fff;
-  border: 1px solid #990002;
-  background-color: #990002;
-}
-.pagination ul a,
-.pg-1 a,
-.pg-1 .current {
-  display: inline-block;
-  margin: 0 5px 8px;
-  padding: 2px 7px;
-  color: #7e7e7e;
-  border: 1px solid #dbdbdb;
-}
-.pagination ul li.active a,
-.pg-1 .current {
-  color: #fff;
-  border: 1px solid #990002;
-  background-color: #990002;
-}
-.pagination ul li a:hover,
-.pg-1 a：hover {
-  color: #990002;
-}
-/*回到头部*/
-.go_top {
-  width: 35px;
-  height: 35px;
-  position: fixed;
-  top: 85%;
-  right: 10px;
-  cursor: pointer;
-  z-index: 99;
-}
-.go_top img {
-  width: 100%;
-}
-::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 6px;
-  /*高宽分别对应横竖滚动条的尺寸*/
-  height: 6px;
-}
-::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
-  background: #d1d1d1;
-}
-::-webkit-scrollbar-track {
-  /*滚动条里面轨道*/
-  border-radius: 10px;
-  background: white;
-}
 /*swiper*/
 #banner {
   width: 100%;
@@ -740,6 +745,7 @@ li {
   -webkit-animation-duration: 5s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
+  height: 100%;
 }
 .swiper-pagination {
   bottom: 35px;

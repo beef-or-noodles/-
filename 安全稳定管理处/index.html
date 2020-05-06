@@ -351,7 +351,17 @@
                             <img src="./img/job3.png" alt="">
                         </a>
                     </div>
-                    <div id="demo2"></div>
+                    <div id="demo2">
+                        <a href="#" class="jobBox">
+                            <img src="./img/job1.png" alt="">
+                        </a>
+                        <a href="#" class="jobBox">
+                            <img src="./img/job2.png" alt="">
+                        </a>
+                        <a href="#" class="jobBox">
+                            <img src="./img/job3.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -406,20 +416,21 @@
                 <a href="">MORE>></a>
             </div>
             <div class="videoImg">
-                <div class="out" id="lun2">
-                    <ul class="img">
-                        <li>
+                <div class="slide clearfix" id="lun2">
+                    <div class="carouse clearfix ser-carouse">
+                        <div class="slideItem">
                             <a href="">
                                 <img src="img/video.png" alt="">
                             </a>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="slideItem">
                             <a href="">
                                 <img src="img/video.png" alt="">
                             </a>
-                        </li>
-                    </ul>
-                    <ul class="num"></ul>
+                        </div>
+                    </div>
+                    <!-- 轮播底部圆点 -->
+                    <div class="dotList"></div>
                 </div>
             </div>
         </div>
@@ -515,17 +526,12 @@
 <script src="js/slide.js"></script>
 <script>
     $(function () {
-        //轮播
-        $("#lun").slide({
+        //视频轮播
+        $("#lun2").slide({
             autoplay: true,
             autoTime: 4000
         });
-        //lun3
-        $("#lun3").slide({
-            autoplay: true,
-            autoTime: 5000
-        });
-        //宣传轮播
+
         var backButton = $('#top');
 
         function backToTop() {
@@ -544,30 +550,6 @@
         });
         $(window).trigger('scroll'); /*触发滚动事件，避免刷新的时候显示回到顶部按钮*/
 
-        /*微信和搜索*/
-        $(".tooltip-options a").tooltip({html: true});
-        $("#serchBox").mouseenter(function () {
-            $("#input").width(150)
-            $("#input").focus()
-        })
-        $("#serchBox").mouseleave(function () {
-            $("#input").width(10)
-            $("#input").blur()
-        });
-
-        /*标签切换*/
-        var width = $(window).width();
-        if (width > 992) {
-            $("#lable h4").hover(function () {
-                var index = $(this).index() + 1
-                $(this).siblings().removeClass("active")
-                $(this).addClass("active")
-                $(".gropBox>div").hide()
-                $(".gropBox>div:nth-child(" + index + ")").show()
-            }, function () {
-
-            })
-        }
 
     })
 
