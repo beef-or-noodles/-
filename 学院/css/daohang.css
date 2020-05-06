@@ -81,6 +81,7 @@ body{
 /*浜岀骇鑿滃崟*/
 .pcNav>li{
     flex: 1;
+    position: relative;
 }
 .pcNav>li>ul>li>a{
     display: block;
@@ -100,15 +101,14 @@ body{
 /*pc*/
 .pcNav .nav_two{
     display: none;
-    position: fixed;
+    position: absolute;
     box-sizing: content-box;
-    width: 150px;
     background: rgba(0,0,0,.5);
     top: 70px;
-    width: 100%;
-    left: 0;
-    float: left;
-    line-height: 55px;
+    left: 50%;
+
+    width: 180px;
+    transform: translateX(-50%)
 }
 .pcNav>li:hover .nav_two{
      display: block;
@@ -121,11 +121,11 @@ body{
     text-align: center;
     font-size: 12px;
     padding:20px 25px;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
-.pcNav .nav_two ul{
-    display: flex;
-    justify-content: center;
-}
+
 @keyframes any {
     0%{
         opacity: 0;
