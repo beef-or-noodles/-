@@ -85,7 +85,8 @@
             var toLeft = zs_itemWidth * i;
             $(this).find(zs_item[i]).css("left", toLeft);
             $(this).find(zs_item[i]).addClass("itemIndex" + i);
-            zs_dotListHtml += '<li class="dot" dotIndex=' + i + '></li>';
+            var num = i+1
+            zs_dotListHtml += '<li class="dot" dotIndex=' + i + '>'+ num +'</li>';
             if (i == zs_item.length - 1) {
                 zs_dotListHtml += "</ul>";
                 var zs_showWord = "<p class='showLunWord'></p>";
