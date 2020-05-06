@@ -1,0 +1,502 @@
+body {
+  font-family: MicrosoftYaHei;
+  background: #eff8ff;
+}
+a {
+  text-decoration: none !important;
+  color: #222222;
+  font-size: 12px;
+}
+a:hover {
+  color: red;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+a {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.row > div {
+  padding: 0 5px;
+  margin: 10px 0;
+}
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  background: #d1d1d1;
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  border-radius: 10px;
+  background: white;
+}
+.pagination {
+  width: 100%;
+  text-align: center;
+}
+.pagination ul span,
+.pg-1 .total {
+  display: inline-block;
+  height: 24px;
+  padding: 0 15px;
+  color: #fff;
+  border: 1px solid #01478e;
+  background-color: #01478e;
+}
+.pagination ul a,
+.pg-1 a,
+.pg-1 .current {
+  display: inline-block;
+  margin: 0 5px 8px;
+  padding: 2px 7px;
+  color: #7e7e7e;
+  border: 1px solid #dbdbdb;
+}
+.pagination ul li.active a,
+.pg-1 .current {
+  color: #fff;
+  border: 1px solid #01478e;
+  background-color: #01478e;
+}
+.pagination ul li a:hover,
+.pg-1 a：hover {
+  color: #01478e;
+}
+.copyright {
+  background: #00468c;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+}
+/*回到头部*/
+.go_top {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 85%;
+  right: 10px;
+  cursor: pointer;
+  z-index: 99;
+}
+.go_top img {
+  width: 100%;
+}
+/*public----------------------------------------------------public*/
+/*头部*/
+.header {
+  width: 100%;
+  background: url("../img/header.png") no-repeat;
+  background-size: 100% 100%;
+}
+.header .row {
+  display: flex;
+  align-items: center;
+}
+.header .navBg {
+  padding-top: 30px;
+  text-align: right;
+}
+.header .navBg img {
+  width: 80%;
+}
+.header .logo {
+  width: 100%;
+}
+.header .logo img {
+  width: 100%;
+}
+/*内容*/
+.content {
+  background: white;
+  padding: 10px 20px;
+  margin: 10px auto;
+}
+.content .top_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border: 1px solid #ececec;
+  border-bottom: 2px solid #01478e;
+  border-left-color: #01478e;
+}
+.content .top_header h4 {
+  padding: 15px;
+  font-size: 16px;
+  background: url("../img/daohang.png");
+  background-size: 100% 100%;
+  margin-bottom: -2px;
+}
+.content .top_header a {
+  font-size: 12px;
+  color: #4b4b4b;
+  margin-right: 15px;
+}
+.content .top_header a:hover {
+  color: #01478e;
+}
+.content .listBox {
+  padding: 10px;
+  border: 1px solid #ececec;
+  border-top: none;
+}
+.content .listBox ul li a {
+  display: flex;
+  align-items: center;
+  line-height: 35px;
+}
+.content .listBox ul li a p,
+.content .listBox ul li a span {
+  display: block;
+  color: #222222;
+  transition: all 0.36s ease;
+  font-size: 14px;
+}
+.content .listBox ul li a:hover p,
+.content .listBox ul li a:hover span {
+  color: #01478e;
+}
+.content .listBox ul li a:hover .iconfont {
+  width: 15px;
+}
+.content .listBox ul li a .title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content .listBox ul li a .iconfont {
+  width: 20px;
+  transition: all 0.36s ease;
+}
+.content .listBox ul li a .time {
+  width: 40px;
+  text-align: right;
+}
+.content .server {
+  display: flex;
+}
+.content .server .left {
+  height: 242px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background: #01478e;
+  color: white;
+}
+.content .server .left > div {
+  text-align: center;
+}
+.content .server .left p {
+  margin: 0 auto;
+  font-size: 20px;
+  width: 15px;
+  text-align: center;
+  line-height: 40px;
+}
+.content .server .left a {
+  display: block;
+  font-size: 14px;
+  margin-top: 20px;
+  color: white;
+}
+.content .server .left a:hover {
+  color: red;
+}
+.content .server .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: url("../img/erverbg.png");
+  background-size: 100% 100%;
+}
+.content .server .right a {
+  display: block;
+  color: #024a92;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.content .server .right a:hover {
+  cursor: pointer;
+}
+.content .job {
+  width: 100%;
+  padding-top: 15px;
+}
+.content .job #demo {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.content .job #demo .jobBox {
+  display: block;
+  margin-bottom: 15px;
+}
+.content .job #demo .jobBox img {
+  width: 100%;
+  height: 100%;
+}
+.content .viedo .videoImg {
+  margin-top: 10px;
+  height: 185px;
+  overflow: hidden;
+}
+.content .viedo .videoImg img {
+  width: 100%;
+}
+.content .phone .phoneBox {
+  padding-top: 13px;
+  border: 1px solid #ececec;
+  padding-left: 15px;
+}
+.content .phone .phoneBox > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.content .phone .phoneBox > div .icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("../img/icon.png");
+  margin-right: 10px;
+}
+.content .phone .phoneBox > div .icon.i4 {
+  background-position-y: -42px;
+}
+.content .phone .phoneBox > div .icon.i5 {
+  background-position-y: -78px;
+}
+.content .phone .phoneBox > div .icon.i6 {
+  background-position-y: -113px;
+}
+.content .phone .phoneBox > div .txt {
+  color: #222222;
+}
+.footer {
+  background: #0460bc;
+  padding: 15px 0;
+}
+.footer .row > div {
+  margin-bottom: 15px;
+}
+.footer .link {
+  display: flex;
+  align-items: center;
+}
+.footer .link a {
+  display: block;
+  color: white;
+  position: relative;
+  padding: 10px 50px;
+  font-size: 16px;
+}
+.footer .link a:first-child {
+  padding-left: 0;
+}
+.footer .link a::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 15px;
+  right: 0;
+  top: 15px;
+  background: white;
+}
+.footer .link a:hover {
+  color: red;
+}
+.footer .link :last-child:after {
+  background: none;
+}
+.footer .logo img {
+  width: 100%;
+}
+.footer .touch {
+  color: white;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.footer .touch p {
+  line-height: 30px;
+}
+.footer .ewm {
+  display: flex;
+  flex: 1;
+}
+.footer .ewm .ibox {
+  display: flex;
+  align-items: center;
+}
+.footer .ewm div {
+  margin-right: 8px;
+}
+.footer .ewm img {
+  width: 100%;
+}
+.footer .ewm p {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+/*-------------------内容列表页页----------------------*/
+.contentPage {
+  background-color: #e4e8ee;
+  padding-bottom: 20px;
+}
+.contentBox .pcleftNav {
+  background-color: white;
+  margin-top: 20px;
+}
+.contentBox .pcleftNav .top {
+  background-color: #01478e;
+  color: white;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentBox .pcleftNav .top .iconfont {
+  font-size: 18px;
+  flex: 1;
+  text-align: right;
+  margin-right: 15px;
+}
+.contentBox .pcleftNav ul {
+  padding-bottom: 10px;
+}
+.contentBox .pcleftNav ul li {
+  padding: 0 10px;
+}
+.contentBox .pcleftNav ul li a {
+  display: block;
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 1px dashed #d1d1d1;
+  line-height: 40px;
+  font-size: 15px;
+  color: #636363;
+}
+.contentBox .pcleftNav ul li a:hover {
+  color: #01478e;
+  border-bottom-color: #01478e;
+}
+.contentBox .right {
+  background-color: white;
+  margin-top: 20px;
+  min-height: 400px;
+}
+.contentBox .right .top {
+  display: flex;
+  padding-top: 15px;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+.contentBox .right .top h4 {
+  margin-left: 20px;
+  border-bottom: 3px solid #01478e;
+  padding-bottom: 10px;
+  margin-bottom: -2px;
+}
+.contentBox .right .top .link {
+  flex: 1;
+  text-align: right;
+  margin-right: 20px;
+}
+.contentBox .right .artice {
+  padding: 20px;
+}
+.contentBox .right .artice .title {
+  font-size: 20px;
+  text-align: center;
+}
+.contentBox .right .artice .abs {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  color: #9d9d9d;
+}
+.contentBox .right .artice .contentAtice table {
+  width: 100% !important;
+}
+.contentBox .right .artice .contentAtice img {
+  max-width: 100% !important;
+  height: auto;
+}
+.contentBox .right .list {
+  padding: 0 15px;
+}
+.contentBox .right .list li a {
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+  border-bottom: 1px dashed #9d9d9d;
+}
+.contentBox .right .list li a span {
+  margin-right: 15px;
+  transition: all 0.36s ease;
+  font-size: 12px;
+}
+.contentBox .right .list li a .title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.contentBox .right .list li a .time {
+  margin-right: 10px;
+}
+.contentBox .right .list li a:hover {
+  color: #01478e;
+}
+.contentBox .right .list li a:hover span {
+  margin-left: 5px;
+}
+@media (max-width: 990px) {
+  .footer .link a {
+    padding: 10px 20px;
+  }
+  .contentBox .pcleftNav .top {
+    margin-top: 60px;
+  }
+  .logo {
+    display: none;
+  }
+  .touch {
+    padding: 0 0 0 15px!important;
+  }
+  .ewm {
+    display: none !important;
+  }
+  .list-inline > li {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
