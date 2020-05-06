@@ -25,7 +25,7 @@
         var t_time;
         var isImgLoad = false;
         var $this = this;
-        var zs_dotListHtml = "<ul class='container'>";
+        var zs_dotListHtml = "<ul>";
         var zs_dots;
         var maxHeight = 0;
 

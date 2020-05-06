@@ -52,28 +52,15 @@ $(function(){
 		})
 	}
 	lunbo("#lun1")
-	lunbo("#lun2")
 
 	/*不间断上下轮播*/
-	function upLunbo(){
-		try {
-			//图片滚动
+	$("#scrollDiv").Scroll({line:1,speed:500,timer:3000});
 
-			var speed=50
-			demo2.innerHTML=demo1.innerHTML
-			function Marquee(){
-				if(demo2.offsetTop-demo.scrollTop<=0)
-					demo.scrollTop-=demo1.offsetHeight
-				else{
-					demo.scrollTop++
-				}
-			}
-			var MyMar=setInterval(Marquee,speed)
-			demo.onmouseover=function() {clearInterval(MyMar)}
-			demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+	//视频轮播
+	$("#lun2").slide({
+		autoplay: true,
+		autoTime: 4000
+	});
 
-		}catch (e) {}
-	}
-	upLunbo()
 
 });
