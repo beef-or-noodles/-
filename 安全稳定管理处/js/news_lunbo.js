@@ -53,9 +53,6 @@ $(function(){
 	}
 	lunbo("#lun1")
 
-	/*不间断上下轮播*/
-	$("#scrollDiv").Scroll({line:1,speed:500,timer:3000});
-
 	//视频轮播
 	$("#lun2").slide({
 		autoplay: true,
