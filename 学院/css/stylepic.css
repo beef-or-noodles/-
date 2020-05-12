@@ -3,16 +3,12 @@ a{
     color: #2a2a2a;
     font-size: 12px;
 }
-.stylelist{
-    display: flex;
-    flex-wrap: wrap;
-}
 .stylelist>a{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    flex-grow:.5;
+    float: left;
 }
 .stylelist>a{
     position: relative;
@@ -52,6 +48,10 @@ a{
     margin: 10px;
     width: 280px;
 }
+.stylelist .styleBox .img{
+    height: 177px;
+    overflow: hidden;
+}
 .stylelist .styleBox img{
     width: 100%;
 }
@@ -60,7 +60,30 @@ a{
     overflow : hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    font-size: 16px;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     margin: 10px;
+}
+@media (max-width: 1200px) {
+    .stylelist .styleBox{
+        width: 230px;
+    }
+}
+@media (max-width: 975px) {
+    .stylelist .styleBox{
+        width: 45%;
+    }
+    .stylelist .styleBox .img{
+
+    }
+}
+@media (max-width: 500px) {
+    .stylelist .styleBox{
+        width: 100%;
+    }
+    .stylelist .styleBox{
+        margin: 0;
+        margin-bottom: 20px;
+    }
 }
