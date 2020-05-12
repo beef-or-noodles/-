@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>学院列表</title>
+</head>
+<body>
+<style>
+    .articeList a {
+        color: #333;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .articeList a:hover {
+        border-bottom: 1px solid #858585;
+    }
+
+    .articeList .boxList {
+        box-sizing: content-box;
+        border-bottom: 1px dotted #ccc;
+        padding: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    .articeList .boxList>div{
+       float: left;
+    }
+    .articeList .boxList .icon {
+        width: 143px;
+        height: 143px;
+    }
+
+    .articeList .boxList .icon img {
+        width: 100%;
+    }
+
+    .articeList .right {
+        width: calc(100% - 150px);
+    }
+
+    .articeList .right .titles {
+        color: #830000;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .articeList .right .abs {
+        font-size: 12px;
+        text-indent: 24px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        color: #333;
+        line-height: 24px;
+    }
+
+    .articeList .right .liskBox {
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .articeList .right .liskBox > div {
+        float: left;
+        width: 33.33%;
+    }
+
+    .articeList .right .liskBox a {
+        padding-left: 14px;
+        background: url("./img/icon_right.png") no-repeat;
+        background-position: left center;
+        line-height: 24px;
+    }
+
+    .articeList .right .liskBox .none:hover {
+        border: none;
+    }
+
+    @media (max-width: 640px) {
+        .articeList .boxList {
+            position: relative;
+            padding-top: 100px;
+        }
+        .articeList .boxList .right{
+            width: 100%;
+        }
+        .articeList .boxList .icon {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+</style>
+<div class="articeList">
+    <div class="boxList">
+        <div class="icon">
+            <img src="./icon.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="titles">国维创新学院</div>
+            <div class="abs">
+                国维创新学院致力于培养具有创新精神和创新能力的综合型创新人才，开展全校大学生创新创业教育、创新体系及创新项目规划的先行先试工作。
+                国维创新学院致力于培养具有创新精神和创新能力的综合型创新人才，开展全校大学生创新创业教育、创新体系及创新项目规划的先行先试工作。
+            </div>
+            <div class="liskBox">
+                <div>
+                    <a href="#">浏览学院网站</a>
+                </div>
+                <div>
+                    <a class="none">办公地点：</a>
+                </div>
+                <div>
+                    <a class="none">联系电话：</a>
+                </div>
+                <div>
+                    <a href="#">专业设置</a>
+                </div>
+                <div>
+                    <a href="#">招生信息</a>
+                </div>
+                <div>
+                    <a href="#">就业信息</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="boxList">
+        <div class="icon">
+            <img src="./icon.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="titles">国维创新学院</div>
+            <div class="abs">
+                国维创新学院致力于培养具有创新精神和创新能力的综合型创新人才，开展全校大学生创新创业教育、创新体系及创新项目规划的先行先试工作。
+                国维创新学院致力于培养具有创新精神和创新能力的综合型创新人才，开展全校大学生创新创业教育、创新体系及创新项目规划的先行先试工作。
+                国维创新学院致力于培养具有创新精神和创新能力的综合型创新人才，开展全校大学生创新创业教育、创新体系及创新项目规划的先行先试工作。
+                国维创新学院致力于培养具有创新精神和创新能力的综合型创新人才，开展全校大学生创新创业教育、创新体系及创新项目规划的先行先试工作。
+            </div>
+            <div class="liskBox">
+                <div>
+                    <a href="#">浏览学院网站</a>
+                </div>
+                <div>
+                    <a class="none">办公地点：</a>
+                </div>
+                <div>
+                    <a class="none">联系电话：</a>
+                </div>
+                <div>
+                    <a href="#">专业设置</a>
+                </div>
+                <div>
+                    <a href="#">招生信息</a>
+                </div>
+                <div>
+                    <a href="#">就业信息</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
