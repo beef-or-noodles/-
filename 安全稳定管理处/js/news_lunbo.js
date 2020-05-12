@@ -58,6 +58,9 @@ $(function(){
 		autoplay: true,
 		autoTime: 4000
 	});
-
-
+	/*向上轮播*/
+	$('.dowebok').liMarquee({
+		direction: 'up',
+		scrollamount:20
+	});
 });
